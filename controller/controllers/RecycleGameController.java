@@ -11,7 +11,7 @@ public class RecycleGameController implements MouseListener, MouseMotionListener
 		//new instance of timer
 		//user timer to call onTick()
 		
-	}core.repositoryformatversion	0
+	}
 
 	@Override
 	public void mouseDragged(MouseEvent e) {

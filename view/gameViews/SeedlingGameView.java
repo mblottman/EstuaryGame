@@ -3,7 +3,7 @@ package gameViews;
 import java.awt.Graphics2D;
 import controllers.SeedlingGameController;
 
-public class SeedlingGameView {
+public class SeedlingGameView implements Viewable {
 	
 	public SeedlingGameView(){
 		

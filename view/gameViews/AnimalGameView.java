@@ -3,7 +3,7 @@ package gameViews;
 import java.awt.Graphics2D;
 import controllers.AnimalGameController;
 
-public class AnimalGameView {
+public class AnimalGameView implements Viewable {
 	
 	public AnimalGameView(){
 		

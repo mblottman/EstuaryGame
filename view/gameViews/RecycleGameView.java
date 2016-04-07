@@ -3,7 +3,7 @@ package gameViews;
 import java.awt.Graphics2D;
 import controllers.RecycleGameController;
 
-public class RecycleGameView {
+public class RecycleGameView implements Viewable {
 	
 	public RecycleGameView(){
 		
@@ -18,6 +18,12 @@ public class RecycleGameView {
 	}
 	
 	public void renderBackground(){
+		
+	}
+
+	@Override
+	public void renderDialogueBox() {
+		// TODO Auto-generated method stub
 		
 	}
 
