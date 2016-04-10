@@ -71,14 +71,7 @@ public abstract class ScreenItem {
 
 
 
-	public String getJpgName() {
-		return jpgName;
-	}
 
-	public void setJpgName(String jpgName) {
-		this.jpgName = jpgName;
-	}
-	
 	
 	
 
