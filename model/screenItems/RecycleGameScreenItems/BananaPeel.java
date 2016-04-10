@@ -7,5 +7,9 @@ public class BananaPeel extends Trash {
 		super(xPos, yPos);
 		// TODO Auto-generated constructor stub
 	}
+	
+	public int hashCode() {
+		return 13;
+	}
 
 }

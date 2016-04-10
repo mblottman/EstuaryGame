@@ -7,4 +7,8 @@ public class Newspaper extends Recyclable {
 		// TODO Auto-generated constructor stub
 	}
 
+	public int hashCode() {
+		return 16;
+	}
+	
 }

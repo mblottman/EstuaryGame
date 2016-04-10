@@ -7,5 +7,8 @@ public class Muskrat extends Animal {
 		// TODO Auto-generated constructor stub
 	}
 	
+	public int hashCode() {
+		return 5;
+	}
 
 }

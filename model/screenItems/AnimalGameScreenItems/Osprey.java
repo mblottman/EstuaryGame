@@ -8,5 +8,9 @@ public class Osprey extends Animal {
 		// TODO Auto-generated constructor stub
 	}
 	
+	
+	public int hashCode() {
+		return 6;
+	}
 
 }

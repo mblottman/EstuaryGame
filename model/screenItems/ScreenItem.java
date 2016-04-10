@@ -18,12 +18,10 @@ public abstract class ScreenItem {
 	private double xPos;
 	private double yPos;
 	private String message; 
-	private String jpgName;
 	
 	public ScreenItem (double xPos, double yPos){
 		this.xPos = xPos;
 		this.yPos = yPos;
-
 	}
 	
 	/**
@@ -81,8 +79,6 @@ public abstract class ScreenItem {
 		this.jpgName = jpgName;
 	}
 	
-	
-
 	
 	
 

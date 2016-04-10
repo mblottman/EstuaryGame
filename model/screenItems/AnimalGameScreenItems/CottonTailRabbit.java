@@ -8,5 +8,9 @@ public class CottonTailRabbit extends Animal {
 		// TODO Auto-generated constructor stub
 	}
 	
+	public int hashCode() {
+		return 3;
+	}
+	
 
 }

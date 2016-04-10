@@ -8,4 +8,8 @@ public class Otter extends Animal{
 		// TODO Auto-generated constructor stub
 	}
 
+	
+	public int hashCode() {
+		return 7;
+	}
 }
