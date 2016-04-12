@@ -9,9 +9,4 @@ public class Trash extends DiscardItems {
 		super(xPos, yPos);
 		// TODO Auto-generated constructor stub
 	}
-	
-	
-	
-	
-
 }

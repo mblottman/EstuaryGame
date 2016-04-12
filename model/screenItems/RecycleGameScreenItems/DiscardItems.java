@@ -72,7 +72,4 @@ public class DiscardItems extends ScreenItem {
 		// need to add switch statements
 		
 	}
-	
-
-
 }
