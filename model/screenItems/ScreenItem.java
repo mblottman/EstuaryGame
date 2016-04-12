@@ -18,12 +18,10 @@ public abstract class ScreenItem {
 	private double xPos;
 	private double yPos;
 	private String message; 
-	private String jpgName;
 	
 	public ScreenItem (double xPos, double yPos){
 		this.xPos = xPos;
 		this.yPos = yPos;
-
 	}
 	
 	/**
@@ -73,15 +71,6 @@ public abstract class ScreenItem {
 
 
 
-	public String getJpgName() {
-		return jpgName;
-	}
-
-	public void setJpgName(String jpgName) {
-		this.jpgName = jpgName;
-	}
-	
-	
 
 	
 	

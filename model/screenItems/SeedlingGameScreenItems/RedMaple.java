@@ -9,4 +9,8 @@ public class RedMaple extends Seed{
 		// TODO Auto-generated constructor stub
 	}
 
+	public int hashCode() {
+		return 22;
+	}
+	
 }

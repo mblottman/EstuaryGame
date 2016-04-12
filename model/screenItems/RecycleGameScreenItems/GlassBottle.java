@@ -6,5 +6,9 @@ public class GlassBottle extends Recyclable{
 		super(xPos, yPos);
 		// TODO Auto-generated constructor stub
 	}
+	
+	public int hashCode() {
+		return 15;
+	}
 
 }

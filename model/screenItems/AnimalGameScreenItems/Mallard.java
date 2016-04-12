@@ -8,5 +8,8 @@ public class Mallard extends Animal {
 		// TODO Auto-generated constructor stub
 	}
 	
+	public int hashCode() {
+		return 4;
+	}
 
 }

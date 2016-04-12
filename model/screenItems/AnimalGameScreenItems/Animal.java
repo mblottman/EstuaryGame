@@ -19,5 +19,9 @@ public class Animal extends ScreenItem {
 		this.isFound = isFound;
 	}
 	
+	public int hashCode() {
+		return 0;
+	}
+	
 
 }

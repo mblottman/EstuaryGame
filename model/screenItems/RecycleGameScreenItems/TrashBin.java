@@ -8,5 +8,9 @@ public class TrashBin extends ScreenItem {
 		super(xPos, yPos);
 		// TODO Auto-generated constructor stub
 	}
+	
+	public int hashCode() {
+		return 19;
+	}
 
 }

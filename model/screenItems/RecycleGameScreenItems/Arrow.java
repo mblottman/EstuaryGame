@@ -24,8 +24,9 @@ public class Arrow extends ScreenItem {
 		
 	}
 
-
-
+	public int hashCode() {
+		return 12;
+	}
 
 
 }

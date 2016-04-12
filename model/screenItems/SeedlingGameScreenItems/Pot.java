@@ -14,7 +14,9 @@ public class Pot extends ScreenItem{
 		return potDescript;
 	}
 
-
+	public int hashCode() {
+		return 21;
+	}
 
 	
 }

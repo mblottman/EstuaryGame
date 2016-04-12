@@ -8,5 +8,9 @@ public class Milkweed extends Seed {
 		super(xPos, yPos);
 		// TODO Auto-generated constructor stub
 	}
+	
+	public int hashCode() {
+		return 20;
+	}
 
 }
