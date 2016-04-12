@@ -17,6 +17,7 @@ public class RecycleGame extends Game {
 	Arrow arrow = new Arrow(0, 0, 0);
 	RecycleBin recycleBin = new RecycleBin(0, 0);
 	TrashBin trashBin = new TrashBin(0, 0);
+	DiscardItems item = new DiscardItems(100,5); //arbitrary x and y
 
 	
 	public RecycleGame(){
@@ -33,6 +34,14 @@ public class RecycleGame extends Game {
 
 	public void setRecycleScore(int recycleScore) {
 		this.recycleScore = recycleScore;
+	}
+	
+	public DiscardItems getDiscardItems(){
+		return item;
+	}
+	
+	public void setDiscardItems(DiscardItems di){
+		this.item = di;
 	}
 
 
