@@ -2,7 +2,6 @@ package games;
 
 import junit.framework.TestCase;
 import screenItems.RecycleGameScreenItems.*;
-import static org.junit.Assert.*;
 
 public class RecycleGameTest extends TestCase {
 

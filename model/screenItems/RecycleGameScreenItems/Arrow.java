@@ -4,7 +4,7 @@ import screenItems.ScreenItem;
 
 public class Arrow extends ScreenItem {
 	
-	private double orientation = 0;
+	private static double orientation = 0;
 	
 	public Arrow(double xPos, double yPos, double orientation) {
 		super(xPos, yPos);
@@ -20,7 +20,6 @@ public class Arrow extends ScreenItem {
 	}
 	
 	public void moveArrow(){
-
 		
 	}
 
