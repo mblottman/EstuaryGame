@@ -1,5 +1,8 @@
 package RecycleGameScreenItem;
 
+import screenItems.RecycleGameScreenItems.AppleCore;
+import screenItems.RecycleGameScreenItems.Arrow;
+import junit.framework.Assert;
 import junit.framework.TestCase;
 /**
  * test all the subclasses of RecycleGameScreenItem
@@ -8,10 +11,15 @@ import junit.framework.TestCase;
  */
 public class RecycleGameTestSI extends TestCase{
 	public void testAppleCore(){
-		
+		AppleCore appleCore = new AppleCore(0, 0);
+		//assertEquals(AppleCore.hashCode(),11);
 	}
 	public void testArrow(){
-		
+		Arrow  arrow = new Arrow(0, 0, 0);
+		arrow.setOrientation(10.00);
+		double value = arrow.getOrientation();
+		Assert.assertEquals(value, 10.00);
+		arrow.moveArrow();
 	}
 	public void testBananaPeel(){
 		
