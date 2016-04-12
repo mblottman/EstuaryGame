@@ -12,7 +12,8 @@ public class SeedlingGame extends Game {
 	 */
 	public int ghettoTimer;
 	private ArrayList <ScreenItem> scrapbook;
-	private int seedScore;
+	private int seedScore = 0;
+	private Pot pot;
 	
 	public SeedlingGame(){
 		super();
@@ -24,6 +25,12 @@ public class SeedlingGame extends Game {
 	
 	public void onTick(){
 		
+	}
+	public Pot getPot(){
+		return pot;
+	}
+	public void setPot(Pot p){
+		this.pot = p;
 	}
 	
 

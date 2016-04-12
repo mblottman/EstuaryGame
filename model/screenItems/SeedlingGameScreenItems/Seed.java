@@ -21,6 +21,13 @@ public class Seed extends ScreenItem{
 	public boolean getIsPickedUp() {
 		return pickedUp;
 	}
+	
+	public void setseedDescript(String descript){
+		this.seedDescript = descript;
+	}
+	public String getseedDescript(){
+		return seedDescript;
+	}
 
 	public void setPickedUp(boolean pickedUp) {
 		this.pickedUp = pickedUp;
