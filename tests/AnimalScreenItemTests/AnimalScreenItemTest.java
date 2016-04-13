@@ -1,6 +1,7 @@
 package AnimalScreenItemTests;
 
 import junit.framework.TestCase;
+import screenItems.AnimalGameScreenItems.Animal;
 //import screenItems.AnimalGameScreenItems.Animal;
 import screenItems.AnimalGameScreenItems.BaldEagle;
 import screenItems.AnimalGameScreenItems.BlackDuck;
@@ -20,10 +21,18 @@ import screenItems.AnimalGameScreenItems.WoodDuck;
 
 public class AnimalScreenItemTest extends TestCase {
 	
+	public void testAnimal(){
+		Animal a = new Animal(0,0);
+		assertEquals("Animal:getxPos assert failed", 0, a.getxPos());
+		assertEquals("Animal: getyPos assert failed", 0, a.getyPos());
+		assertEquals("Animal: isFound assert failed", false, a.isFound());
+		assertEquals("Animal: hashCode assert failed", 0, a.hashCode());
+		//im dumb and cant remember how to test setisfound plz help
+		
+	}
+	
 	public void testBaldEagle(){
-		//SCREEN ITEM XPOS NEEDS TO BE MADE AN INT NOT A DOUBLE!!!!!!!
 		BaldEagle be = new BaldEagle(1,2);
-//		assertEquals("BaldEagle:getXPos assert failed", 0.99999999999999999, be.getxPos());
 		assertEquals("BaldEagle:getXPos assert failed", 1, be.getxPos());
 		assertEquals("BaldEagle:getY assert failed", 2, be.getyPos());
 		assertEquals("BaldEagle: hashCode assert failed", 1, be.hashCode());
