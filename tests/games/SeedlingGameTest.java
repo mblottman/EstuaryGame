@@ -27,7 +27,6 @@ public class SeedlingGameTest extends TestCase {
 	public void testCheckDescript() {
 		SeedlingGame testgame = new SeedlingGame();
 		Seed seed = new Seed(0,0);
-		seed.setseedDescript("bob");
 		Pot pot = new Pot(0,0);
 		pot.setPotDescript("charles");
 		assertFalse(testgame.checkDescript(seed, pot));

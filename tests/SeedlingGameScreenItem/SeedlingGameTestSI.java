@@ -1,11 +1,7 @@
 package SeedlingGameScreenItem;
 
 import junit.framework.TestCase;
-import screenItems.SeedlingGameScreenItems.DuneGrass;
-import screenItems.SeedlingGameScreenItems.Milkweed;
-import screenItems.SeedlingGameScreenItems.Pot;
-import screenItems.SeedlingGameScreenItems.RedMaple;
-import screenItems.SeedlingGameScreenItems.SilverMaple;
+import screenItems.SeedlingGameScreenItems.*;
 
 public class SeedlingGameTestSI extends TestCase {
 
@@ -83,8 +79,8 @@ public class SeedlingGameTestSI extends TestCase {
 		rm.setInDirt(true);
 		assertTrue(rm.isInDirt());
 		
-		rm.check()
-		rm.resetSeed()
+		rm.check();
+		rm.resetSeed();
 	
 	}
 	
@@ -111,20 +107,19 @@ public class SeedlingGameTestSI extends TestCase {
 		sm.setInDirt(true);
 		assertTrue(sm.isInDirt());
 		
-		sm.check()
-		sm.resetSeed()
+		sm.check();
+		sm.resetSeed();
 	}
 	
 	public void testPot(){
 		Pot pot = new Pot(3,9);
 		
-		//molly what is sm?
-		assertEquals(3,sm.getxPos());
-		assertEquals(9,sm.getyPos());
-		sm.setxPos(0);
-		sm.setyPos(20);
-		assertEquals(0,sm.getxPos());
-		assertEquals(20,sm.getyPos());
+		assertEquals(3,pot.getxPos());
+		assertEquals(9,pot.getyPos());
+		pot.setxPos(0);
+		pot.setyPos(20);
+		assertEquals(0,pot.getxPos());
+		assertEquals(20,pot.getyPos());
 		
 		assertEquals("blah im a pot", pot.getPotDescript());
 		pot.setPotDescript("i changed my description but im still a pot!");
