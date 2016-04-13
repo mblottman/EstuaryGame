@@ -21,9 +21,11 @@ import screenItems.AnimalGameScreenItems.WoodDuck;
 public class AnimalScreenItemTest extends TestCase {
 	
 	public void testBaldEagle(){
-		BaldEagle be = new BaldEagle(1,2);
-		assertEquals("BaldEagle:getXPos assert failed", 1, be.getxPos());
-		assertEquals("BaldEagle:getY assert failed", 2, be.getyPos());
+		//SCREEN ITEM XPOS NEEDS TO BE MADE AN INT NOT A DOUBLE!!!!!!!
+		BaldEagle be = new BaldEagle(1.0,2.0);
+//		assertEquals("BaldEagle:getXPos assert failed", 0.99999999999999999, be.getxPos());
+		assertEquals("BaldEagle:getXPos assert failed", 1.0, be.getxPos());
+		assertEquals("BaldEagle:getY assert failed", 2.0, be.getyPos());
 		assertEquals("BaldEagle: hashCode assert failed", 1, be.hashCode());
 	}
 	
