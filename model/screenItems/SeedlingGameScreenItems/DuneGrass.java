@@ -12,6 +12,5 @@ public class DuneGrass extends Seed {
 	public int hashCode() {
 		return 24;
 	}
-
 	
 }
