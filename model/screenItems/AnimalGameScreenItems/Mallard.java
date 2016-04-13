@@ -3,7 +3,7 @@ package screenItems.AnimalGameScreenItems;
 public class Mallard extends Animal {
 	
 
-	public Mallard(double xPos, double yPos) {
+	public Mallard(int xPos, int yPos) {
 		super(xPos, yPos);
 		// TODO Auto-generated constructor stub
 	}

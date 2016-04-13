@@ -3,7 +3,7 @@ package screenItems.AnimalGameScreenItems;
 public class Otter extends Animal{
 
 
-	public Otter(double xPos, double yPos) {
+	public Otter(int xPos, int yPos) {
 		super(xPos, yPos);
 		// TODO Auto-generated constructor stub
 	}

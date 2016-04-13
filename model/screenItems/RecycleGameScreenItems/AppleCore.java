@@ -3,7 +3,7 @@ package screenItems.RecycleGameScreenItems;
 
 public class AppleCore extends Trash {
 	
-	public AppleCore(double xPos, double yPos) {
+	public AppleCore(int xPos, int yPos) {
 		super(xPos, yPos);
 		// TODO Auto-generated constructor stub
 	}

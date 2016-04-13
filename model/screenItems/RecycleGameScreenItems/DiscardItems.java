@@ -10,7 +10,7 @@ public class DiscardItems extends ScreenItem {
 	private boolean isThrown;
 	private String name;
 
-	public DiscardItems(double xPos, double yPos) {
+	public DiscardItems(int xPos, int yPos) {
 		super(xPos, yPos);
 	
 		// got rid of name attribute

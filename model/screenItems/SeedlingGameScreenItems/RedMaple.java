@@ -4,7 +4,7 @@ public class RedMaple extends Seed{
 
 	final String seedDescript = "blah4";
 	
-	public RedMaple(double xPos, double yPos) {
+	public RedMaple(int xPos, int yPos) {
 		super(xPos, yPos);
 		// TODO Auto-generated constructor stub
 	}

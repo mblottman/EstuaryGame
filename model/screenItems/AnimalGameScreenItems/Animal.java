@@ -6,7 +6,7 @@ public class Animal extends ScreenItem {
 	
 	private boolean isFound = false;
 	
-	public Animal(double xPos, double yPos) {
+	public Animal(int xPos, int yPos) {
 		super(xPos, yPos);
 		// TODO Auto-generated constructor stub
 	}

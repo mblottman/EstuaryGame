@@ -8,7 +8,7 @@ public class Seed extends ScreenItem{
 	private boolean pickedUp = false;
 	private boolean inDirt = false;
 
-	public Seed(double xPos, double yPos) {
+	public Seed(int xPos, int yPos) {
 		super(xPos, yPos);
 		// TODO Auto-generated constructor stub
 	}

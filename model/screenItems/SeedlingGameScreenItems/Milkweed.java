@@ -4,7 +4,7 @@ public class Milkweed extends Seed {
 	
 	final String seedDescript = "blah3";
 
-	public Milkweed(double xPos, double yPos) {
+	public Milkweed(int xPos, int yPos) {
 		super(xPos, yPos);
 		// TODO Auto-generated constructor stub
 	}

@@ -6,7 +6,8 @@ public class Arrow extends ScreenItem {
 	
 	private static double orientation = 0;
 	
-	public Arrow(double xPos, double yPos, double orientation) {
+	//we might not want orientation to be a double
+	public Arrow(int xPos, int yPos, double orientation) {
 		super(xPos, yPos);
 		// TODO Auto-generated constructor stub
 	}

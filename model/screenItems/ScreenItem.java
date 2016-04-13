@@ -15,11 +15,11 @@ public abstract class ScreenItem {
 	 *position on the screen (on a Cartesian plane). 
 	 */
 	
-	private double xPos;
-	private double yPos;
+	private int xPos;
+	private int yPos;
 	private String message; 
 	
-	public ScreenItem (double xPos, double yPos){
+	public ScreenItem (int xPos, int yPos){
 		this.xPos = xPos;
 		this.yPos = yPos;
 	}
@@ -29,7 +29,7 @@ public abstract class ScreenItem {
 	 * a private field. 
 	 * @return position of x
 	 */
-	public double getxPos() {
+	public int getxPos() {
 		return xPos;
 	}
 	
@@ -38,7 +38,7 @@ public abstract class ScreenItem {
 	 * though it is a private field. 
 	 * @param xPos
 	 */
-	public void setxPos(double xPos) {
+	public void setxPos(int xPos) {
 		this.xPos = xPos;
 	}
 	
@@ -47,7 +47,7 @@ public abstract class ScreenItem {
 	 * a private field. 
 	 * @return  position of y 
 	 */
-	public double getyPos() {
+	public int getyPos() {
 		return yPos;
 	}
 	
@@ -57,7 +57,7 @@ public abstract class ScreenItem {
 	 * though it is a private field. 
 	 * @param yPos
 	 */
-	public void setyPos(double yPos) {
+	public void setyPos(int yPos) {
 		this.yPos = yPos;
 	}
 	

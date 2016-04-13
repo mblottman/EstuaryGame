@@ -5,7 +5,7 @@ import screenItems.ScreenItem;
 public class Pot extends ScreenItem{
 	private String potDescript = "blah im a pot";
 
-	public Pot(double xPos, double yPos) {
+	public Pot(int xPos, int yPos) {
 		super(xPos, yPos);
 		// TODO Auto-generated constructor stub
 	}

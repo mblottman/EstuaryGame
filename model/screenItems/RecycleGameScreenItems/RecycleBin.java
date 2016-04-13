@@ -4,7 +4,7 @@ import screenItems.ScreenItem;
 
 public class RecycleBin extends ScreenItem {
 
-	public RecycleBin(double xPos, double yPos) {
+	public RecycleBin(int xPos, int yPos) {
 		super(xPos, yPos);
 		// TODO Auto-generated constructor stub
 	}

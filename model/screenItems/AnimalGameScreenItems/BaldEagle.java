@@ -4,7 +4,7 @@ public class BaldEagle extends Animal {
 	
 
 
-	public BaldEagle(double xPos, double yPos) {
+	public BaldEagle(int xPos, int yPos) {
 		super(xPos, yPos);
 		// TODO Auto-generated constructor stub
 	}

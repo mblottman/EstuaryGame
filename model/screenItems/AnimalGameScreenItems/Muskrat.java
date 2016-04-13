@@ -2,7 +2,7 @@ package screenItems.AnimalGameScreenItems;
 
 public class Muskrat extends Animal {
 	
-	public Muskrat(double xPos, double yPos) {
+	public Muskrat(int xPos, int yPos) {
 		super(xPos, yPos);
 		// TODO Auto-generated constructor stub
 	}

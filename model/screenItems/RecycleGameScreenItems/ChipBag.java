@@ -3,7 +3,7 @@ package screenItems.RecycleGameScreenItems;
 
 public class ChipBag extends Trash{
 
-	public ChipBag(double xPos, double yPos) {
+	public ChipBag(int xPos, int yPos) {
 		super(xPos, yPos);
 		// TODO Auto-generated constructor stub
 	}
