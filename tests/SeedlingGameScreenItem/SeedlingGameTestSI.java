@@ -1,5 +1,12 @@
 package SeedlingGameScreenItem;
 
+import junit.framework.TestCase;
+import screenItems.SeedlingGameScreenItems.DuneGrass;
+import screenItems.SeedlingGameScreenItems.Milkweed;
+import screenItems.SeedlingGameScreenItems.Pot;
+import screenItems.SeedlingGameScreenItems.RedMaple;
+import screenItems.SeedlingGameScreenItems.SilverMaple;
+
 public class SeedlingGameTestSI extends TestCase {
 
 	public void testDuneGrass(){
@@ -24,8 +31,8 @@ public class SeedlingGameTestSI extends TestCase {
 		dg.setInDirt(true);
 		assertTrue(dg.isInDirt());
 		
-		dg.check()
-		dg.resetSeed()
+		dg.check();
+		dg.resetSeed();
 	}
 
 	public void testMilkweed(){
@@ -50,8 +57,8 @@ public class SeedlingGameTestSI extends TestCase {
 		mw.setInDirt(true);
 		assertTrue(mw.isInDirt());
 		
-		mw.check()
-		mw.resetSeed()
+		mw.check();
+		mw.resetSeed();
 	}
 
 	public void testRedMaple(){
@@ -111,6 +118,7 @@ public class SeedlingGameTestSI extends TestCase {
 	public void testPot(){
 		Pot pot = new Pot(3,9);
 		
+		//molly what is sm?
 		assertEquals(3,sm.getxPos());
 		assertEquals(9,sm.getyPos());
 		sm.setxPos(0);
