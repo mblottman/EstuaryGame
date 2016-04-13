@@ -48,6 +48,7 @@ public class RecycleGameTestSI extends TestCase{
 		AppleCore appleCore = new AppleCore(0, 0);
 		appleCore.hashCode();
 	}
+	
 	public void testArrow(){
 		Arrow arrow = new Arrow(0, 0, 0);
 		
@@ -58,10 +59,12 @@ public class RecycleGameTestSI extends TestCase{
 		arrow.moveArrow();
 		arrow.hashCode();
 	}
+	
 	public void testBananaPeel(){
 		BananaPeel bananaPeel = new BananaPeel(0, 0);
 		bananaPeel.hashCode();
 	}
+	
 	public void testChipBag(){
 		ChipBag chipBag = new ChipBag(0, 0);
 		chipBag.hashCode();
@@ -71,14 +74,17 @@ public class RecycleGameTestSI extends TestCase{
 		GlassBottle glassBottle = new GlassBottle(0, 0);
 		glassBottle.hashCode();
 	}
+	
 	public void testNewspaper(){
 		Newspaper newspaper = new Newspaper(0, 0);
 		newspaper.hashCode();
 	}
+	
 	public void testTinCan(){
 		TinCan tinCan = new TinCan(0, 0);
 		tinCan.hashCode();
 	}
+	
 	public void testTrashBin(){
 		TrashBin trashBin = new TrashBin(0, 0);
 		trashBin.hashCode();
@@ -87,9 +93,11 @@ public class RecycleGameTestSI extends TestCase{
 	public void testRecyclable(){
 		Recyclable recyclable = new Recyclable(0, 0);
 	}
+	
 	public void testTrash(){
 		Trash trash = new Trash(0, 0);
 	}
+	
 	public void testRecycleBin(){
 		RecycleBin recycleBin = new RecycleBin(0, 0);
 		recycleBin.hashCode();
