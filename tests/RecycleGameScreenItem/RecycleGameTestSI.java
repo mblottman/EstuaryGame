@@ -62,13 +62,13 @@ public class RecycleGameTestSI extends TestCase{
 		
 		assertEquals(0,arrow.getxPos());
 		assertEquals(0,arrow.getyPos());
-		assertEquals(0,arrow.getOrientation());
+		assertEquals(0.0,arrow.getOrientation());
 		arrow.setxPos(8);
 		arrow.setyPos(10);
-		arrow.setOrientation(2);
+		arrow.setOrientation(2.0);
 		assertEquals(8,arrow.getxPos());
 		assertEquals(10,arrow.getyPos());
-		assertEquals(2,arrow.getOrientation());
+		assertEquals(2.0,arrow.getOrientation());
 		
 		arrow.moveArrow();
 		arrow.hashCode();
