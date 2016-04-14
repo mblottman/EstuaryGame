@@ -45,16 +45,30 @@ import junit.framework.TestCase;
  */
 public class RecycleGameTestSI extends TestCase{
 	public void testAppleCore(){
-		AppleCore appleCore = new AppleCore(0, 0);
+		AppleCore appleCore = new AppleCore(2, 3);
+		
+		assertEquals(2,appleCore.getxPos());
+		assertEquals(3,appleCore.getyPos());
+		appleCore.setxPos(8);
+		appleCore.setyPos(10);
+		assertEquals(8,appleCore.getxPos());
+		assertEquals(10,appleCore.getyPos());
+		
 		appleCore.hashCode();
 	}
 	
 	public void testArrow(){
 		Arrow arrow = new Arrow(0, 0, 0);
 		
-		arrow.setOrientation(10.00);
-		double value = arrow.getOrientation();
-		assertEquals(value, 10.00);
+		assertEquals(0,arrow.getxPos());
+		assertEquals(0,arrow.getyPos());
+		assertEquals(0,arrow.getOrientation());
+		arrow.setxPos(8);
+		arrow.setyPos(10);
+		arrow.setOrientation(2);
+		assertEquals(8,arrow.getxPos());
+		assertEquals(10,arrow.getyPos());
+		assertEquals(2,arrow.getOrientation());
 		
 		arrow.moveArrow();
 		arrow.hashCode();
@@ -62,49 +76,126 @@ public class RecycleGameTestSI extends TestCase{
 	
 	public void testBananaPeel(){
 		BananaPeel bananaPeel = new BananaPeel(0, 0);
+		
+		assertEquals(0,bananaPeel.getxPos());
+		assertEquals(0,bananaPeel.getyPos());
+		bananaPeel.setxPos(8);
+		bananaPeel.setyPos(10);
+		assertEquals(8,bananaPeel.getxPos());
+		assertEquals(10,bananaPeel.getyPos());
+		
 		bananaPeel.hashCode();
 	}
 	
 	public void testChipBag(){
 		ChipBag chipBag = new ChipBag(0, 0);
+		
+		assertEquals(0,chipBag.getxPos());
+		assertEquals(0,chipBag.getyPos());
+		chipBag.setxPos(8);
+		chipBag.setyPos(10);
+		assertEquals(8,chipBag.getxPos());
+		assertEquals(10,chipBag.getyPos());
+		
 		chipBag.hashCode();
 	}
 	
 	public void testGlassBottle(){
 		GlassBottle glassBottle = new GlassBottle(0, 0);
+		
+		assertEquals(0,glassBottle.getxPos());
+		assertEquals(0,glassBottle.getyPos());
+		glassBottle.setxPos(8);
+		glassBottle.setyPos(10);
+		assertEquals(8,glassBottle.getxPos());
+		assertEquals(10,glassBottle.getyPos());
+		
 		glassBottle.hashCode();
 	}
 	
 	public void testNewspaper(){
 		Newspaper newspaper = new Newspaper(0, 0);
+		
+		assertEquals(0,newspaper.getxPos());
+		assertEquals(0,newspaper.getyPos());
+		newspaper.setxPos(8);
+		newspaper.setyPos(10);
+		assertEquals(8,newspaper.getxPos());
+		assertEquals(10,newspaper.getyPos());
+		
 		newspaper.hashCode();
 	}
 	
 	public void testTinCan(){
 		TinCan tinCan = new TinCan(0, 0);
+		
+		assertEquals(0,tinCan.getxPos());
+		assertEquals(0,tinCan.getyPos());
+		tinCan.setxPos(8);
+		tinCan.setyPos(10);
+		assertEquals(8,tinCan.getxPos());
+		assertEquals(10,tinCan.getyPos());
+		
 		tinCan.hashCode();
 	}
 	
 	public void testTrashBin(){
 		TrashBin trashBin = new TrashBin(0, 0);
+		
+		assertEquals(0,trashBin.getxPos());
+		assertEquals(0,trashBin.getyPos());
+		trashBin.setxPos(8);
+		trashBin.setyPos(10);
+		assertEquals(8,trashBin.getxPos());
+		assertEquals(10,trashBin.getyPos());
+		
 		trashBin.hashCode();
 	}
 	
 	public void testRecyclable(){
 		Recyclable recyclable = new Recyclable(0, 0);
+		
+		assertEquals(0,recyclable.getxPos());
+		assertEquals(0,recyclable.getyPos());
+		recyclable.setxPos(8);
+		recyclable.setyPos(10);
+		assertEquals(8,recyclable.getxPos());
+		assertEquals(10,recyclable.getyPos());
 	}
 	
 	public void testTrash(){
 		Trash trash = new Trash(0, 0);
+		
+		assertEquals(0,trash.getxPos());
+		assertEquals(0,trash.getyPos());
+		trash.setxPos(8);
+		trash.setyPos(10);
+		assertEquals(8,trash.getxPos());
+		assertEquals(10,trash.getyPos());
 	}
 	
 	public void testRecycleBin(){
 		RecycleBin recycleBin = new RecycleBin(0, 0);
+		
+		assertEquals(0,recycleBin.getxPos());
+		assertEquals(0,recycleBin.getyPos());
+		recycleBin.setxPos(8);
+		recycleBin.setyPos(10);
+		assertEquals(8,recycleBin.getxPos());
+		assertEquals(10,recycleBin.getyPos());
+		
 		recycleBin.hashCode();
 	}
 	
 	public void testDiscardItems(){
 		DiscardItems discardItems = new DiscardItems(0, 0);
+		
+		assertEquals(0,discardItems.getxPos());
+		assertEquals(0,discardItems.getyPos());
+		discardItems.setxPos(8);
+		discardItems.setyPos(10);
+		assertEquals(8,discardItems.getxPos());
+		assertEquals(10,discardItems.getyPos());
 		
 		discardItems.setRecyclable(true);
 		boolean isRecyclable = discardItems.getIsRecyclable();
