@@ -1,7 +1,10 @@
 package games;
 
 import junit.framework.TestCase;
-import screenItems.SeedlingGameScreenItems.*;
+
+import stjonesestuary.model.games.SeedlingGame;
+import stjonesestuary.model.screenitems.seedlinggamescreenitems.Pot;
+import stjonesestuary.model.screenitems.seedlinggamescreenitems.Seed;
 
 public class SeedlingGameTest extends TestCase {
 

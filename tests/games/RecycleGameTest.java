@@ -1,7 +1,9 @@
 package games;
 
 import junit.framework.TestCase;
-import screenItems.RecycleGameScreenItems.*;
+import stjonesestuary.model.games.RecycleGame;
+import stjonesestuary.model.screenitems.recyclegamescreenitems.DiscardItems;
+
 
 public class RecycleGameTest extends TestCase {
 
