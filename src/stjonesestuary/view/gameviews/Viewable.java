@@ -2,14 +2,18 @@ package stjonesestuary.view.gameviews;
 
 import java.awt.Graphics2D;
 
-public interface Viewable {
+import java.awt.EventQueue;
+import javax.swing.JFrame;
+
+
+public abstract class Viewable extends JFrame{
 	
-	public void render (Graphics2D g);
+	abstract public void render();
 	
-	public void renderScreenItems();
+	abstract public void renderScreenItems();
 	
-	public void renderBackground();
+	abstract public void renderBackground();
 	
-	public void renderDialogueBox();
+	abstract public void renderDialogueBox();
 
 }

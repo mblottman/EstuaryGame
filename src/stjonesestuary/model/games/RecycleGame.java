@@ -15,7 +15,7 @@ public class RecycleGame extends Game {
 	public int ghettoTimer;
 	private int recycleScore;
 	
-	Arrow arrow = new Arrow(0, 0, 0);
+	public Arrow arrow = new Arrow(0, 0, 0);
 	RecycleBin recycleBin = new RecycleBin(0, 0);
 	TrashBin trashBin = new TrashBin(0, 0);
 	DiscardItems item = new DiscardItems(100,5); //arbitrary x and y

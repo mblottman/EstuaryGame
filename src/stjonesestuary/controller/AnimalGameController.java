@@ -4,11 +4,23 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
+import stjonesestuary.view.gameviews.AnimalGameView;
+import stjonesestuary.view.gameviews.MainGameView;
+import stjonesestuary.view.gameviews.SeedlingGameView;
+
 public class AnimalGameController implements MouseListener, MouseMotionListener {
-	
+	private MainGameView window;
+	private AnimalGameView view;
+
+	public AnimalGameController(MainGameView window){
+		this.window = window;
+	}
 	public void run(){
-		//make instance of game and view
-		
+		//new instance of timer
+		//user timer to call onTick()
+		//render
+		view = new AnimalGameView(window);
+		view.render();
 	}
 
 	@Override

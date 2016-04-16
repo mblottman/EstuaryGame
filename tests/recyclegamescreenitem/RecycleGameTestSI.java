@@ -1,4 +1,4 @@
-package recyclegamesscreenitem;
+package recyclegamescreenitem;
 
 import java.awt.Color;
 import java.awt.Composite;
