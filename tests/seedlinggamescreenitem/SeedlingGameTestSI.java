@@ -1,7 +1,12 @@
-package SeedlingGameScreenItem;
+package seedlinggamescreenitem;
 
 import junit.framework.TestCase;
-import screenItems.SeedlingGameScreenItems.*;
+import stjonesestuary.model.screenitems.seedlinggamescreenitems.DuneGrass;
+import stjonesestuary.model.screenitems.seedlinggamescreenitems.Milkweed;
+import stjonesestuary.model.screenitems.seedlinggamescreenitems.Pot;
+import stjonesestuary.model.screenitems.seedlinggamescreenitems.RedMaple;
+import stjonesestuary.model.screenitems.seedlinggamescreenitems.SilverMaple;
+
 
 public class SeedlingGameTestSI extends TestCase {
 

@@ -2,8 +2,10 @@ package games;
 
 import junit.framework.TestCase;
 import java.util.ArrayList;
+import stjonesestuary.model.games.Game;
+import stjonesestuary.model.games.RecycleGame;
+import stjonesestuary.model.screenitems.ScreenItem;
 
-import screenItems.ScreenItem;
 public class GameTest extends TestCase {
 
 	public void testGame() {

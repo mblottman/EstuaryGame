@@ -1,4 +1,4 @@
-package RecycleGameScreenItem;
+package recyclegamesscreenitem;
 
 import java.awt.Color;
 import java.awt.Composite;
@@ -25,19 +25,20 @@ import java.awt.image.renderable.RenderableImage;
 import java.text.AttributedCharacterIterator;
 import java.util.Map;
 
-import screenItems.RecycleGameScreenItems.AppleCore;
-import screenItems.RecycleGameScreenItems.Arrow;
-import screenItems.RecycleGameScreenItems.BananaPeel;
-import screenItems.RecycleGameScreenItems.ChipBag;
-import screenItems.RecycleGameScreenItems.DiscardItems;
-import screenItems.RecycleGameScreenItems.GlassBottle;
-import screenItems.RecycleGameScreenItems.Newspaper;
-import screenItems.RecycleGameScreenItems.Recyclable;
-import screenItems.RecycleGameScreenItems.RecycleBin;
-import screenItems.RecycleGameScreenItems.TinCan;
-import screenItems.RecycleGameScreenItems.Trash;
-import screenItems.RecycleGameScreenItems.TrashBin;
+
 import junit.framework.TestCase;
+import stjonesestuary.model.screenitems.recyclegamescreenitems.AppleCore;
+import stjonesestuary.model.screenitems.recyclegamescreenitems.Arrow;
+import stjonesestuary.model.screenitems.recyclegamescreenitems.BananaPeel;
+import stjonesestuary.model.screenitems.recyclegamescreenitems.ChipBag;
+import stjonesestuary.model.screenitems.recyclegamescreenitems.DiscardItems;
+import stjonesestuary.model.screenitems.recyclegamescreenitems.GlassBottle;
+import stjonesestuary.model.screenitems.recyclegamescreenitems.Newspaper;
+import stjonesestuary.model.screenitems.recyclegamescreenitems.Recyclable;
+import stjonesestuary.model.screenitems.recyclegamescreenitems.RecycleBin;
+import stjonesestuary.model.screenitems.recyclegamescreenitems.TinCan;
+import stjonesestuary.model.screenitems.recyclegamescreenitems.Trash;
+import stjonesestuary.model.screenitems.recyclegamescreenitems.TrashBin;
 /**
  * test all the subclasses of RecycleGameScreenItem
  * @author wenyiyin

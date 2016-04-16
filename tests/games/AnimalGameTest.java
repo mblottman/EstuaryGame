@@ -3,7 +3,9 @@ package games;
 import java.util.ArrayList;
 
 import junit.framework.TestCase;
-import screenItems.ScreenItem;
+import stjonesestuary.model.games.AnimalGame;
+import stjonesestuary.model.screenitems.ScreenItem;
+
 
 public class AnimalGameTest extends TestCase {
 
