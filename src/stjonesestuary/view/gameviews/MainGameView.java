@@ -59,37 +59,30 @@ public class MainGameView extends Viewable implements MouseListener{
 		
 		rButton.addActionListener(new ActionListener(){
 			public void actionPerformed (ActionEvent r){
-				try{
 					setLayout(new BorderLayout());
 				    setContentPane(new JLabel(new ImageIcon("imageBank/RecycleGame/recycleGameBackGround.PNG")));
 				    setLayout(new FlowLayout());
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
+				    System.out.println("recycle background printed");
+
 			}
 		});
 		
 		sButton.addActionListener(new ActionListener(){
 			public void actionPerformed (ActionEvent s){
-				try{
 					setLayout(new BorderLayout());
 					setContentPane(new JLabel(new ImageIcon("imageBank/SeedlingGame/seedlingGameBackground.png")));
+					System.out.println("seedling background printed");
 					setLayout(new FlowLayout());
-				} catch (Exception e){
-					e.printStackTrace();
-				}
+
 			}
 		});
 		
 		aButton.addActionListener(new ActionListener(){
 			public void actionPerformed (ActionEvent a){
-				try{
 					setLayout(new BorderLayout());
 					setContentPane(new JLabel(new ImageIcon("imageBank/AnimalGame/animalgameBackground.png")));
 					setLayout(new FlowLayout());
-				} catch (Exception e){
-					e.printStackTrace();
-				}
+					System.out.println("animal abackground printed");
 			}
 		});
 
