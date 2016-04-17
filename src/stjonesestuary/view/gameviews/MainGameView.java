@@ -41,7 +41,10 @@ public class MainGameView extends Viewable implements MouseListener{
 	}
 	/**
 	 * renderButtons() puts the initial buttons to go to the subgames on the board.
-	 * This method has no clicking functionality and is only for visual purposes.
+	 * An ImageIcon is made using the appropriate icons in the image bank, a button is 
+	 * made from these ImageIcons, and they are displayed on the screen. 
+	 * ActionListeners are added to each button to listen to clicks. When a button is clicked
+	 * it takes the user to the appropriate subgame.
 	 */
 	
 	public void renderButtons(){
