@@ -26,9 +26,9 @@ public class RecycleGameView extends Viewable {
 	}
 	
 	public void renderBackground(){
-		window.setLayout(new BorderLayout());
-	    window.setContentPane(new JLabel(new ImageIcon("imageBank/RecycleGame/applecore.png")));
-	    window.setLayout(new FlowLayout());
+//		window.setLayout(new BorderLayout());
+//	    window.setContentPane(new JLabel(new ImageIcon("imageBank/RecycleGame/applecore.png")));
+//	    window.setLayout(new FlowLayout());
 	}
 
 	@Override
