@@ -3,6 +3,7 @@ package stjonesestuary.view.gameviews;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -25,7 +26,7 @@ public class RecycleGameView extends Viewable {
 	
 	JLabel recycleArrowLabel = new JLabel(new ImageIcon("imageBank/ReycleGame/arrow.PNG"));
 	//JFrame frame = new JFrame("imageBank/RecycleGame/recycleGameBackGround.png");
-	JPanel aPanel = new JPanel(new FlowLayout(-100));
+	//JPanel aPanel = new JPanel(new FlowLayout(-100));
 
 	
 	public RecycleGameView(MainGameView window){
@@ -43,11 +44,11 @@ public class RecycleGameView extends Viewable {
 		try {
 			arrowImage = ImageIO.read(new File ("imageBank/RecycleGame/arrow.png"));
 			JLabel arrowLabel = new JLabel(new ImageIcon (arrowImage));
-			//window.add(arrowLabel);
+			window.add(arrowLabel);
 //			Dimension size = arrowLabel.getPreferredSize();
 //			arrowLabel.setBounds(100, 100, size.width, size.height);
-		    aPanel.add(arrowLabel);
-		    window.getContentPane().add(aPanel);
+		    //aPanel.add(arrowLabel);
+		    //window.getContentPane().add(aPanel);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -56,32 +57,44 @@ public class RecycleGameView extends Viewable {
 		System.out.println("arrow printed");
 		
 
-		rotate(arrowImage);
+		//rotate(arrowImage);
 	}
 	
+//	
+//	@Override
+//    public void paintComponent(Graphics g) {
+//        Graphics2D g2d = (Graphics2D) g;
+//        int w2 = getWidth() / 2;
+//        int h2 = getHeight() / 2;
+//        g2d.rotate(-Math.PI / 2, w2, h2);
+//        super.paintComponent(g);
+//    }
 	
 	
-	public BufferedImage rotate (BufferedImage inputImage){
-		System.out.println("arrow rotate");
-		int width = inputImage.getWidth();
-		int height = inputImage.getHeight();
-		
-		BufferedImage returnImage = new BufferedImage (width, height,inputImage.getType());
-		
-		for (int x = 0; x < width; x++){
-			for (int y=0 ; y< height; y++){
-				returnImage.setRGB(width-x-1, height-y-1, inputImage.getRGB(x, y));
-			}
-		}
-		
-		return returnImage;
-	}
+	
+	
+	
+//	public BufferedImage rotate (BufferedImage inputImage){
+//		System.out.println("arrow rotate");
+//		int width = inputImage.getWidth();
+//		int height = inputImage.getHeight();
+//		
+//		BufferedImage returnImage = new BufferedImage (width, height,inputImage.getType());
+//		
+//		for (int x = 0; x < width; x++){
+//			for (int y=0 ; y< height; y++){
+//				returnImage.setRGB(width-x-1, height-y-1, inputImage.getRGB(x, y));
+//			}
+//		}
+//		
+//		return returnImage;
+//	}
 	
 	
 	public void renderBackground(){
-		window.setLayout(new BorderLayout());
-	    window.setContentPane(new JLabel(new ImageIcon("imageBank/RecycleGame/recycleGameBackGround.png")));
-	    window.setLayout(new FlowLayout());
+//		window.setLayout(new BorderLayout());
+//	    window.setContentPane(new JLabel(new ImageIcon("imageBank/RecycleGame/recycleGameBackGround.png")));
+//	    window.setLayout(new FlowLayout());
 		renderScreenItems();
 //		setLayout(new BorderLayout());
 //		setContentPane(new JLabel(new ImageIcon("imageBank/RecycleGame/recycleGameBackGround.png")));

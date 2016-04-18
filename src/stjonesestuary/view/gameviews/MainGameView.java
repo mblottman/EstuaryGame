@@ -22,9 +22,9 @@ public class MainGameView extends Viewable implements MouseListener, ActionListe
 	private static final long serialVersionUID = 1L;
 	protected JButton sButton, rButton, aButton;
 
-    JLabel recycleGameLabel = new JLabel(new ImageIcon("imageBank/ReycleGame/applecore.PNG"));
-    JLabel seedlingGameLabel = new JLabel(new ImageIcon("imageBank/SeedlingGame/seed.PNG"));
-    JLabel animalGameLabel = new JLabel(new ImageIcon("imageBank/AnimalGame/mallard.PNG"));
+//    JLabel recycleGameLabel = new JLabel(new ImageIcon("imageBank/ReycleGame/applecore.PNG"));
+//    JLabel seedlingGameLabel = new JLabel(new ImageIcon("imageBank/SeedlingGame/seed.PNG"));
+//    JLabel animalGameLabel = new JLabel(new ImageIcon("imageBank/AnimalGame/mallard.PNG"));
     
 	public MainGameView(){
 		setTitle("EstuaryExplorer!");
@@ -87,6 +87,20 @@ public class MainGameView extends Viewable implements MouseListener, ActionListe
 			sButton.setEnabled(false);
 			aButton.setEnabled(true);
 		}
+		
+		if (rButton.isEnabled()){
+			this.setLayout(new BorderLayout());
+		    this.setContentPane(new JLabel(new ImageIcon("imageBank/RecycleGame/recycleGameBackGround.png")));
+		    this.setLayout(new FlowLayout());
+		} else if (sButton.isEnabled()){
+			this.setLayout(new BorderLayout());
+		    this.setContentPane(new JLabel(new ImageIcon("imageBank/SeedlingGame/seedlingGameBackground.png")));
+		    this.setLayout(new FlowLayout());
+		} else {
+			this.setLayout(new BorderLayout());
+		    this.setContentPane(new JLabel(new ImageIcon("imageBank/AnimalGame/animalgameBackground.png")));
+		    this.setLayout(new FlowLayout());
+		}
 	}
 	
 	/**
@@ -100,8 +114,7 @@ public class MainGameView extends Viewable implements MouseListener, ActionListe
 	    setContentPane(new JLabel(new ImageIcon("imageBank/StJonesMap.PNG")));
 	    setLayout(new FlowLayout());
 	    renderButtons();
-	    
-
+	  
 	}
 	
 	public void renderDialogueBox(){
