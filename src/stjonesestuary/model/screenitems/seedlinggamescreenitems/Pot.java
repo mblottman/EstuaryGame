@@ -28,7 +28,7 @@ public class Pot extends ScreenItem{
 		return 21;
 	}
 	
-	public void movePot(){
+	public int movePot(){
 		//After the animation of seeding, set isPotMove = true.
 		//Move the pot from original position to right and make it disappear.
 		while(isPotMove) {
@@ -37,6 +37,7 @@ public class Pot extends ScreenItem{
 			}
 		}
 		isPotMove = false;
+		return getxPos();
 	}
 	private BufferedImage createImage(){
 		BufferedImage bufferedImage;
@@ -52,8 +53,8 @@ public class Pot extends ScreenItem{
 	public void animationPot(){
 		BufferedImage potImg;
     	potImg = createImage();
-    	for(int i = 250; i < 500; i++){
-    		potImg = potImg.getSubimage(getxPos(), 0, potImg.getWidth(), potImg.getHeight());
-    	}
+    	//for(int i = 250; i < 500; i++){
+    		potImg = potImg.getSubimage(movePot(), 0, potImg.getWidth(), potImg.getHeight());
+    	//}
 	}
 }
