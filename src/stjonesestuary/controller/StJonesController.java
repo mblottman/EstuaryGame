@@ -26,18 +26,8 @@ public class StJonesController  implements MouseListener, MouseMotionListener{
 		//run the specific game controller dependent on that
 		//wait for a new game
 		MainGameView window = new MainGameView();
-		window.renderBackground();
 		window.render();
-		SeedlingGameController seedcontrol = new SeedlingGameController(window);
-		AnimalGameController animalcontrol = new AnimalGameController(window);
-		RecycleGameController recyclecontrol = new RecycleGameController(window);
-		//This is to show it runs
-		TimeUnit.SECONDS.sleep(2);
-		seedcontrol.run();
-		TimeUnit.SECONDS.sleep(2);
-		animalcontrol.run();
-		TimeUnit.SECONDS.sleep(2);
-		recyclecontrol.run();
+		
 	}
 
 	@Override

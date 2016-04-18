@@ -35,8 +35,8 @@ public class RecycleGameView extends Viewable {
 	
 	public void render (){
 		renderBackground();
-		//renderScreenItems();
-		window.render();
+		renderScreenItems();
+		window.setVisible(true);
 	}
 	
 	public void renderScreenItems(){
@@ -95,7 +95,7 @@ public class RecycleGameView extends Viewable {
 //		window.setLayout(new BorderLayout());
 //	    window.setContentPane(new JLabel(new ImageIcon("imageBank/RecycleGame/recycleGameBackGround.png")));
 //	    window.setLayout(new FlowLayout());
-		renderScreenItems();
+		//renderScreenItems();
 //		setLayout(new BorderLayout());
 //		setContentPane(new JLabel(new ImageIcon("imageBank/RecycleGame/recycleGameBackGround.png")));
 //		setLayout(new FlowLayout());

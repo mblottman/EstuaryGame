@@ -1,4 +1,5 @@
 package stjonesestuary.view.gameviews;
+import stjonesestuary.controller.RecycleGameController;
 import stjonesestuary.controller.SeedlingGameController;
 import stjonesestuary.model.games.RecycleGame;
 
@@ -34,11 +35,11 @@ public class MainGameView extends Viewable implements MouseListener, ActionListe
 	}
 	
 	public void render (){
+		this.renderBackground();
         setVisible(true);
 	}
 	
 	public void renderScreenItems(){
-		
 
 	}
 	/**
@@ -69,7 +70,6 @@ public class MainGameView extends Viewable implements MouseListener, ActionListe
 		add(rButton);
 		add(sButton);
 		add(aButton);	
-
 	}
 	
 	@Override
@@ -92,14 +92,22 @@ public class MainGameView extends Viewable implements MouseListener, ActionListe
 			this.setLayout(new BorderLayout());
 		    this.setContentPane(new JLabel(new ImageIcon("imageBank/RecycleGame/recycleGameBackGround.png")));
 		    this.setLayout(new FlowLayout());
+		    this.setVisible(true);
+		    RecycleGameController recyclecontrol = new RecycleGameController(this);
+		    recyclecontrol.run();
+		    
 		} else if (sButton.isEnabled()){
 			this.setLayout(new BorderLayout());
 		    this.setContentPane(new JLabel(new ImageIcon("imageBank/SeedlingGame/seedlingGameBackground.png")));
 		    this.setLayout(new FlowLayout());
+		    this.setVisible(true);
+
 		} else {
 			this.setLayout(new BorderLayout());
 		    this.setContentPane(new JLabel(new ImageIcon("imageBank/AnimalGame/animalgameBackground.png")));
 		    this.setLayout(new FlowLayout());
+		    this.setVisible(true);
+
 		}
 	}
 	
