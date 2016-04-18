@@ -26,6 +26,11 @@ public class AnimalGameView extends Viewable {
 	}
 	
 	public void renderBackground(){
+		
+//		window.setLayout(new BorderLayout());
+//	    window.setContentPane(new JLabel(new ImageIcon("imageBank/AnimalGame/animalgameBackground.png")));
+//	    window.setLayout(new FlowLayout());
+//		renderScreenItems();
 //		window.setLayout(new BorderLayout());
 //	    window.setContentPane(new JLabel(new ImageIcon("imageBank/AnimalGame/mallard.png")));
 //	    window.setLayout(new FlowLayout());
@@ -34,4 +39,5 @@ public class AnimalGameView extends Viewable {
 	public void renderDialogueBox(){
 		
 	}
+
 }

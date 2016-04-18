@@ -14,12 +14,13 @@ import java.io.File;
 import java.io.IOException;
 
 
-public class MainGameView extends Viewable implements MouseListener{
+public class MainGameView extends Viewable implements MouseListener, ActionListener{
 	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	protected JButton sButton, rButton, aButton;
 
     JLabel recycleGameLabel = new JLabel(new ImageIcon("imageBank/ReycleGame/applecore.PNG"));
     JLabel seedlingGameLabel = new JLabel(new ImageIcon("imageBank/SeedlingGame/seed.PNG"));
@@ -53,47 +54,39 @@ public class MainGameView extends Viewable implements MouseListener{
 		ImageIcon seedlingButton = new ImageIcon("imageBank/SeedlingGame/seed.png");
 		ImageIcon animalButton = new ImageIcon("imageBank/AnimalGame/mallard.png");
 		
-		JButton rButton = new JButton(recycleButton);
-		JButton sButton = new JButton(seedlingButton);
-		JButton aButton = new JButton(animalButton);
+		rButton = new JButton(recycleButton);
+		sButton = new JButton(seedlingButton);
+		aButton = new JButton(animalButton);
+		
+		rButton.addActionListener(this);
+		sButton.addActionListener(this);
+		aButton.addActionListener(this);
+		
+		rButton.setActionCommand("recycle");	
+		sButton.setActionCommand("seedling");
+		aButton.setActionCommand("animal");
 		
 		add(rButton);
 		add(sButton);
-		add(aButton);
-		
-		rButton.addActionListener(new ActionListener(){
-			public void actionPerformed (ActionEvent r){
-				renderBackground();
-				//RecycleGame rg = new RecycleGame();
-			    //renderBackground();
-//				setLayout(new BorderLayout());
-//				setContentPane(new JLabel(new ImageIcon("imageBank/RecycleGame/recycleGameBackGround.png")));
-//				setLayout(new FlowLayout());
-//				System.out.println("recycle background printed blah blah blah");
-				renderScreenItems();
-			}
-			
-		});
-		
-		sButton.addActionListener(new ActionListener(){
-			public void actionPerformed (ActionEvent s){
-					setLayout(new BorderLayout());
-					setContentPane(new JLabel(new ImageIcon("imageBank/SeedlingGame/seedlingGameBackground.png")));
-					System.out.println("seedling background printed");
-					setLayout(new FlowLayout());
+		add(aButton);	
 
-			}
-		});
-		
-		aButton.addActionListener(new ActionListener(){
-			public void actionPerformed (ActionEvent a){
-					setLayout(new BorderLayout());
-					setContentPane(new JLabel(new ImageIcon("imageBank/AnimalGame/animalgameBackground.png")));
-					setLayout(new FlowLayout());
-					System.out.println("animal abackground printed");
-			}
-		});
-
+	}
+	
+	@Override
+	public void actionPerformed(ActionEvent e){
+		if("seedling".equals(e.getActionCommand())){
+			rButton.setEnabled(false);
+			sButton.setEnabled(true);
+			aButton.setEnabled(false);
+		} else if("recycle".equals(e.getActionCommand())){
+			rButton.setEnabled(true);
+			sButton.setEnabled(false);
+			aButton.setEnabled(false);
+		} else {
+			rButton.setEnabled(false);
+			sButton.setEnabled(false);
+			aButton.setEnabled(true);
+		}
 	}
 	
 	/**

@@ -1,6 +1,7 @@
 package stjonesestuary.view.gameviews;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
@@ -12,6 +13,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 import stjonesestuary.controller.StJonesController;
 
@@ -23,7 +25,8 @@ public class RecycleGameView extends Viewable {
 	
 	JLabel recycleArrowLabel = new JLabel(new ImageIcon("imageBank/ReycleGame/arrow.PNG"));
 	//JFrame frame = new JFrame("imageBank/RecycleGame/recycleGameBackGround.png");
-	
+	JPanel aPanel = new JPanel(new FlowLayout(-100));
+
 	
 	public RecycleGameView(MainGameView window){
 		this.window = window;
@@ -40,7 +43,11 @@ public class RecycleGameView extends Viewable {
 		try {
 			arrowImage = ImageIO.read(new File ("imageBank/RecycleGame/arrow.png"));
 			JLabel arrowLabel = new JLabel(new ImageIcon (arrowImage));
-			window.add(arrowLabel);
+			//window.add(arrowLabel);
+//			Dimension size = arrowLabel.getPreferredSize();
+//			arrowLabel.setBounds(100, 100, size.width, size.height);
+		    aPanel.add(arrowLabel);
+		    window.getContentPane().add(aPanel);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

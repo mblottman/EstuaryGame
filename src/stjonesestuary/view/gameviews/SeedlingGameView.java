@@ -24,6 +24,11 @@ public class SeedlingGameView extends Viewable{
 	}
 	
 	public void renderBackground(){
+//		
+//		window.setLayout(new BorderLayout());
+//	    window.setContentPane(new JLabel(new ImageIcon("imageBank/SeedlingGame/seedlingGameBackground.png")));
+//	    window.setLayout(new FlowLayout());
+//		renderScreenItems();
 //		window.setLayout(new BorderLayout());
 //	    window.setContentPane(new JLabel(new ImageIcon("imageBank/SeedlingGame/seed.png")));
 //	    window.setLayout(new FlowLayout());
