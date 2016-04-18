@@ -1,5 +1,6 @@
 package stjonesestuary.view.gameviews;
 import stjonesestuary.controller.SeedlingGameController;
+import stjonesestuary.model.games.RecycleGame;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -62,12 +63,16 @@ public class MainGameView extends Viewable implements MouseListener{
 		
 		rButton.addActionListener(new ActionListener(){
 			public void actionPerformed (ActionEvent r){
-					setLayout(new BorderLayout());
-				    setContentPane(new JLabel(new ImageIcon("imageBank/RecycleGame/recycleGameBackGround.PNG")));
-				    setLayout(new FlowLayout());
-				    System.out.println("recycle background printed");
-
+				renderBackground();
+				//RecycleGame rg = new RecycleGame();
+			    //renderBackground();
+//				setLayout(new BorderLayout());
+//				setContentPane(new JLabel(new ImageIcon("imageBank/RecycleGame/recycleGameBackGround.png")));
+//				setLayout(new FlowLayout());
+//				System.out.println("recycle background printed blah blah blah");
+				renderScreenItems();
 			}
+			
 		});
 		
 		sButton.addActionListener(new ActionListener(){

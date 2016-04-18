@@ -46,6 +46,8 @@ public class RecycleGame extends Game {
 
 
 	public void init(){
+		Arrow a = new Arrow(0, 0, 0);
+		
 		
 	}
 	
@@ -61,7 +63,10 @@ public class RecycleGame extends Game {
 	}
 	
 	public void onTick(){
-		
+		init();
+		while (!isDone()){
+			arrow.moveArrow();
+		}
 	}
 	
 

@@ -85,32 +85,32 @@ public class Arrow extends ScreenItem {
 
 	
     //Read image from file and return
-    private BufferedImage createImage(String orientation){
-    	BufferedImage bufferedImage;
-    	try {
-    		/// import image
-    		bufferedImage = ImageIO.read(new File("arrow/arrow_" + orientation + ".png"));
-    		return bufferedImage;
-    	} catch (IOException e) {
-    		e.printStackTrace();
-    	}
-    	return null;
-    }
+//    private BufferedImage createImage(String orientation){
+//    	BufferedImage bufferedImage;
+//    	try {
+//    		/// import image
+//    		bufferedImage = ImageIO.read(new File("arrow/arrow_" + orientation + ".png"));
+//    		return bufferedImage;
+//    	} catch (IOException e) {
+//    		e.printStackTrace();
+//    	}
+//    	return null;
+//    }
     
     // FIX THIS NOWWWWWWW
 	
 
     //Constructor: get image, segment and store in array
-    public void ChangeArrow(){
-    	String[] arrayDirec = new String[] {"0", "15","30","45","60","75","90","-15","-30","-45","-60","-75","-90"};
-    	
-    	pics = new BufferedImage[13];
-    	for(int i = 0; i < 13 ; i++){
-    		BufferedImage img = createImage(arrayDirec[i]);   	    		
-	    	pics[i] = img.getSubimage(3*i, 0, 3, 3);
-    	}
-    	// TODO: Change this constructor so that at least eight orc animation pngs are loaded
-    }
+//    public void ChangeArrow(){
+//    	String[] arrayDirec = new String[] {"0", "15","30","45","60","75","90","-15","-30","-45","-60","-75","-90"};
+//    	
+//    	pics = new BufferedImage[13];
+//    	for(int i = 0; i < 13 ; i++){
+//    		BufferedImage img = createImage(arrayDirec[i]);   	    		
+//	    	pics[i] = img.getSubimage(3*i, 0, 3, 3);
+//    	}
+//    	// TODO: Change this constructor so that at least eight orc animation pngs are loaded
+//    }
 
 	
 	
