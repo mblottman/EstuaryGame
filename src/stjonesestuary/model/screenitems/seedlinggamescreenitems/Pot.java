@@ -31,22 +31,29 @@ public class Pot extends ScreenItem{
 	public void movePot(){
 		//After the animation of seeding, set isPotMove = true.
 		//Move the pot from original position to right and make it disappear.
-		BufferedImage potImage = null;
-		/*File folder = new File("imageBank.SeedlingGame");
-		File[] listOfFile = folder.listFiles();
-		try{
-			potImage = ImageIO.read(listOfFile[8]);
-		} catch(IOException e){
-			e.printStackTrace();
-		}*/
-
 		while(isPotMove) {
-			for(int i = 250; i< 500;i++){
-				potImage.getSubimage(getxPos()*i, 0, getxPos(), getyPos());
+			for(int i = 0; i< 500;i++){
+				setxPos(getxPos() + 1);
 			}
 		}
 		isPotMove = false;
 	}
-
+	private BufferedImage createImage(){
+		BufferedImage bufferedImage;
+		try{
+			bufferedImage = ImageIO.read(new File("pot.png"));
+    		return bufferedImage;
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+		return null;
+	}
 	
+	public void animationPot(){
+		BufferedImage potImg;
+    	potImg = createImage();
+    	for(int i = 250; i < 500; i++){
+    		potImg = potImg.getSubimage(getxPos(), 0, potImg.getWidth(), potImg.getHeight());
+    	}
+	}
 }
