@@ -22,6 +22,7 @@ public class RecycleGameController implements MouseListener, MouseMotionListener
 		//render
 		view = new RecycleGameView(window);
 		view.render();
+		view.renderScreenItems();
 	}
 
 	@Override

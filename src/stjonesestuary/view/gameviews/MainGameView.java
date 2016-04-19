@@ -89,10 +89,6 @@ public class MainGameView extends Viewable implements MouseListener, ActionListe
 		}
 		
 		if (rButton.isEnabled()){
-			this.setLayout(new BorderLayout());
-		    this.setContentPane(new JLabel(new ImageIcon("imageBank/RecycleGame/recycleGameBackGround.png")));
-		    this.setLayout(new FlowLayout());
-		    this.setVisible(true);
 		    RecycleGameController recyclecontrol = new RecycleGameController(this);
 		    recyclecontrol.run();
 		    

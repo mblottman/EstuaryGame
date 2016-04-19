@@ -5,9 +5,14 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.geom.AffineTransform;
+import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.sql.Time;
+import java.util.Timer;
+import java.util.concurrent.TimeUnit;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -16,13 +21,16 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import org.omg.CORBA.TIMEOUT;
+
 import stjonesestuary.controller.StJonesController;
 
 import stjonesestuary.controller.RecycleGameController;
 
 public class RecycleGameView extends Viewable {
 	private MainGameView window;
-	
+	BufferedImage arrowImage = null;
+
 	
 	JLabel recycleArrowLabel = new JLabel(new ImageIcon("imageBank/ReycleGame/arrow.PNG"));
 	//JFrame frame = new JFrame("imageBank/RecycleGame/recycleGameBackGround.png");
@@ -34,9 +42,10 @@ public class RecycleGameView extends Viewable {
 	}
 	
 	public void render (){
-		renderBackground();
-		renderScreenItems();
+		this.renderBackground();
 		window.setVisible(true);
+		//renderScreenItems();
+		//window.setVisible(true);
 	}
 	
 	public void renderScreenItems(){
@@ -45,11 +54,35 @@ public class RecycleGameView extends Viewable {
 			arrowImage = ImageIO.read(new File ("imageBank/RecycleGame/arrow.png"));
 			JLabel arrowLabel = new JLabel(new ImageIcon (arrowImage));
 			window.add(arrowLabel);
+			window.setVisible(true);
+			System.out.println(arrowLabel.getX());
+			System.out.println(arrowLabel.getY());
 //			Dimension size = arrowLabel.getPreferredSize();
 //			arrowLabel.setBounds(100, 100, size.width, size.height);
 		    //aPanel.add(arrowLabel);
 		    //window.getContentPane().add(aPanel);
-		} catch (IOException e) {
+//			repaint();
+			AffineTransform transform = new AffineTransform();
+			transform.rotate(Math.toDegrees(1), arrowImage.getWidth()/2, arrowImage.getHeight()/2);
+			AffineTransformOp op = new AffineTransformOp(transform, AffineTransformOp.TYPE_BILINEAR);
+			arrowImage = op.filter(arrowImage, null);
+			arrowLabel = new JLabel(new ImageIcon(arrowImage));
+			window.add(arrowLabel);
+			window.setVisible(true);
+			
+			
+//			for(int i = 0; i<200;i++){
+//				transform.rotate(Math.toDegrees(15), arrowImage.getWidth()/2, arrowImage.getHeight()/2);
+//				AffineTransformOp op = new AffineTransformOp(transform, AffineTransformOp.TYPE_BILINEAR);
+//				arrowImage = op.filter(arrowImage, null);
+//				arrowLabel = new JLabel(new ImageIcon(arrowImage));
+//				window.add(arrowLabel);
+//				window.setVisible(true);
+//				//TimeUnit.SECONDS.sleep(1);
+//				window.remove(arrowLabel);
+//				System.out.println(i);
+//			}
+		} catch (IOException e){ //| InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -60,20 +93,97 @@ public class RecycleGameView extends Viewable {
 		//rotate(arrowImage);
 	}
 	
+//	public void rotateArrow(){
+//		//window.remove(arrowLabel);
+//		
+//		/// NEWWWWWW
+//		double degreesToRotate = 25;
+//	    double locationX =arrowImage.getWidth() / 2;
+//	    double locationY = arrowImage.getHeight() / 2;
+//
+//	    double diff = Math.abs(arrowImage.getWidth() - arrowImage.getHeight());
+//
+//	    //To correct the set of origin point and the overflow
+//	    double rotationRequired = Math.toRadians(degreesToRotate);
+//	    double unitX = Math.abs(Math.cos(rotationRequired));
+//	    double unitY = Math.abs(Math.sin(rotationRequired));
+//
+//	    double correctUx = unitX;
+//	    double correctUy = unitY;
+//
+//	    //if the height is greater than the width, so you have to 'change' the axis to correct the overflow
+//	    if(arrowImage.getWidth() < arrowImage.getHeight()){
+//	        correctUx = unitY;
+//	        correctUy = unitX;
+//	    }
+//
+//	    int posAffineTransformOpX = 0-(int)(locationX)-(int)(correctUx*diff);
+//	    int posAffineTransformOpY = 0-(int)(locationY)-(int)(correctUy*diff);
+//
+//	    //translate the image center to same diff that dislocates the origin, to correct its point set
+//	    AffineTransform objTrans = new AffineTransform();
+//	    objTrans.translate(correctUx*diff, correctUy*diff);
+//	    objTrans.rotate(rotationRequired, locationX, locationY);
+//
+//	    AffineTransformOp op = new AffineTransformOp(objTrans, AffineTransformOp.TYPE_BILINEAR);
+//
+//	    // Drawing the rotated image at the required drawing locations
+//	    //graphic2dObj.drawImage(op.filter(arrowImage, null), posAffineTransformOpX, posAffineTransformOpY, null);
+//		arrowImage = op.filter(arrowImage, null);
+//		//arrowLabel = new JLabel(new ImageIcon(arrowImage));
+//		//window.add(arrowLabel);
+//		window.setVisible(true);
+//		
+//	}
+	
+	
+	
+	
+	@Override
+    public void repaint() {
+        super.repaint();
+    }
+	
+
+//	AffineTransform identity = new AffineTransform();
+//
+//
+//	public void paint(Graphics g) {
+//		Graphics2D g2d = (Graphics2D)g;
+//		AffineTransform trans = new AffineTransform();
+//		trans.setTransform(arrowImage);
+//		trans.rotate( Math.toRadians(45) );
+//		g2d.drawImage(arrowImage, trans, this);
+//	}
 //	
-//	@Override
-//    public void paintComponent(Graphics g) {
-//        Graphics2D g2d = (Graphics2D) g;
-//        int w2 = getWidth() / 2;
-//        int h2 = getHeight() / 2;
-//        g2d.rotate(-Math.PI / 2, w2, h2);
-//        super.paintComponent(g);
-//    }
+//	
+//	
 	
 	
 	
+//	
+	@Override
+    public void paintComponent(Graphics g) {
+        //super.paintComponent(g);
+        //g.drawImage(arrowImage, 500, 500, null);
+		Graphics2D g2d = (Graphics2D) g;
+        int w2 = getWidth() / 2;
+        int h2 = getHeight() / 2;
+        g2d.rotate(-Math.PI / 2, w2, h2);
+        super.paintComponent(g);
+    }
 	
+//	public void paintComponent(Graphics g) {
+//	    // Let UI Delegate paint first, which 
+//	    // includes background filling since 
+//	    // this component is opaque.
+//
+//	    super.paintComponent(g);       
+//	    g.drawString("This is my custom Panel!",10,20);
+//	    redSquare.paintSquare(g);
+//	} 
 	
+
 //	public BufferedImage rotate (BufferedImage inputImage){
 //		System.out.println("arrow rotate");
 //		int width = inputImage.getWidth();
@@ -92,14 +202,9 @@ public class RecycleGameView extends Viewable {
 	
 	
 	public void renderBackground(){
-//		window.setLayout(new BorderLayout());
-//	    window.setContentPane(new JLabel(new ImageIcon("imageBank/RecycleGame/recycleGameBackGround.png")));
-//	    window.setLayout(new FlowLayout());
-		//renderScreenItems();
-//		setLayout(new BorderLayout());
-//		setContentPane(new JLabel(new ImageIcon("imageBank/RecycleGame/recycleGameBackGround.png")));
-//		setLayout(new FlowLayout());
-//		System.out.println("recycle background printed blah blah blah");
+		window.setLayout(new BorderLayout());
+	    window.setContentPane(new JLabel(new ImageIcon("imageBank/RecycleGame/recycleGameBackGround.png")));
+	    window.setLayout(new FlowLayout());
 	}
 
 	@Override
