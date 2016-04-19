@@ -27,7 +27,7 @@ public class StJonesController  implements MouseListener, MouseMotionListener{
 		//wait for a new game
 		MainGameView window = new MainGameView();
 		window.render();
-		
+		System.err.println("BLAH");
 	}
 
 	@Override

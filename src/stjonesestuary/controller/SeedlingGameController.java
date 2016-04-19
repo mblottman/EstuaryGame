@@ -25,6 +25,7 @@ public class SeedlingGameController implements MouseListener, MouseMotionListene
 		//render
 		view = new SeedlingGameView(window);
 		view.render();
+		view.renderScreenItems();
 	}
 	
 	

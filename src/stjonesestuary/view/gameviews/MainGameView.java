@@ -36,7 +36,9 @@ public class MainGameView extends Viewable implements MouseListener, ActionListe
 	
 	public void render (){
 		this.renderBackground();
+		renderButtons();
         setVisible(true);
+        
 	}
 	
 	public void renderScreenItems(){
@@ -117,7 +119,7 @@ public class MainGameView extends Viewable implements MouseListener, ActionListe
 		setLayout(new BorderLayout());
 	    setContentPane(new JLabel(new ImageIcon("imageBank/StJonesMap.PNG")));
 	    setLayout(new FlowLayout());
-	    renderButtons();
+	    //renderButtons();
 	  
 	}
 	
