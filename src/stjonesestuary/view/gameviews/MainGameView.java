@@ -21,8 +21,11 @@ public class MainGameView extends Viewable implements MouseListener, ActionListe
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	protected JButton sButton, rButton, aButton;
+	public JButton sButton, rButton, aButton;
+	public boolean aclicked, sclicked, rclicked = false;
 
+	//RecycleGameView rv = new RecycleGameView();
+	
 //    JLabel recycleGameLabel = new JLabel(new ImageIcon("imageBank/ReycleGame/applecore.PNG"));
 //    JLabel seedlingGameLabel = new JLabel(new ImageIcon("imageBank/SeedlingGame/seed.PNG"));
 //    JLabel animalGameLabel = new JLabel(new ImageIcon("imageBank/AnimalGame/mallard.PNG"));
@@ -93,18 +96,21 @@ public class MainGameView extends Viewable implements MouseListener, ActionListe
 		if (rButton.isEnabled()){
 		    RecycleGameController recyclecontrol = new RecycleGameController(this);
 		    recyclecontrol.run();
+		    rclicked = true;
 		    
 		} else if (sButton.isEnabled()){
 			this.setLayout(new BorderLayout());
 		    this.setContentPane(new JLabel(new ImageIcon("imageBank/SeedlingGame/seedlingGameBackground.png")));
 		    this.setLayout(new FlowLayout());
 		    this.setVisible(true);
+		    sclicked = true;
 
 		} else {
 			this.setLayout(new BorderLayout());
 		    this.setContentPane(new JLabel(new ImageIcon("imageBank/AnimalGame/animalgameBackground.png")));
 		    this.setLayout(new FlowLayout());
 		    this.setVisible(true);
+		    aclicked = true;
 
 		}
 	}

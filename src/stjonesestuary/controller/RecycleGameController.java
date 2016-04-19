@@ -11,6 +11,7 @@ import stjonesestuary.view.gameviews.SeedlingGameView;
 
 public class RecycleGameController implements MouseListener, MouseMotionListener {
 	private RecycleGameView view;
+	
 	private MainGameView window;
 	
 	public RecycleGameController(MainGameView window){
@@ -21,7 +22,7 @@ public class RecycleGameController implements MouseListener, MouseMotionListener
 		//user timer to call onTick()
 		//render
 		view = new RecycleGameView(window);
-		view.render();
+		this.view.render();
 		view.renderScreenItems();
 	}
 
