@@ -1,6 +1,12 @@
 package stjonesestuary.view.gameviews;
-
+import java.awt.*;
+import javax.swing.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.awt.BorderLayout;
+
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Graphics;
@@ -8,56 +14,65 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import stjonesestuary.controller.StJonesController;
-
+import stjonesestuary.model.screenitems.ScreenItem;
+import stjonesestuary.model.screenitems.recyclegamescreenitems.Arrow;
 import stjonesestuary.controller.RecycleGameController;
+import javax.imageio.ImageIO;
 
-public class RecycleGameView extends Viewable {
-	private MainGameView window;
+public class RecycleGameView extends JPanel{
+	private JFrame window;
+	public BufferedImage arrowImage;
+	public int x;
+
 	
-	
-	JLabel recycleArrowLabel = new JLabel(new ImageIcon("imageBank/ReycleGame/arrow.PNG"));
+	//JLabel recycleArrowLabel = new JLabel(new ImageIcon("imageBank/ReycleGame/arrow.PNG"));
 	//JFrame frame = new JFrame("imageBank/RecycleGame/recycleGameBackGround.png");
 	//JPanel aPanel = new JPanel(new FlowLayout(-100));
 
 	
-	public RecycleGameView(MainGameView window){
+	public RecycleGameView(JFrame window){
 		this.window = window;
-	}
-	
-	public void render (){
-		renderBackground();
-		renderScreenItems();
-		window.setVisible(true);
-	}
-	
-	public void renderScreenItems(){
-		BufferedImage arrowImage = null;
+		x = 40;
 		try {
-			arrowImage = ImageIO.read(new File ("imageBank/RecycleGame/arrow.png"));
-			JLabel arrowLabel = new JLabel(new ImageIcon (arrowImage));
-			window.add(arrowLabel);
-//			Dimension size = arrowLabel.getPreferredSize();
-//			arrowLabel.setBounds(100, 100, size.width, size.height);
-		    //aPanel.add(arrowLabel);
-		    //window.getContentPane().add(aPanel);
+			arrowImage = ImageIO.read(new File ("imageBank/RecycleGame/arrow_90.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		//JButton arrowButt = new JButton(arrowImage);
-		System.out.println("arrow printed");
-		
+	}
+	
+	public void render (ArrayList<ScreenItem> si){
+		//renderScreenItems(si);
+		//window.setVisible(true);
 
-		//rotate(arrowImage);
+	}
+	
+	public void renderScreenItems(ArrayList<ScreenItem> si){
+		/*BufferedImage arrowImage = null;
+		JLabel arrowLabel = null;
+		Arrow arrow = (Arrow) si.get(0);
+		try {
+			arrowImage = ImageIO.read(new File ("imageBank/RecycleGame/arrow.png"));
+			ImageIcon arrowicon = new ImageIcon(arrowImage);
+			RotatedIcon ri = new RotatedIcon(arrowicon,arrow.getOrientation());
+			arrowLabel = new JLabel(ri);
+			window.add(arrowLabel);
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}*/
 	}
 	
 //	
@@ -92,21 +107,20 @@ public class RecycleGameView extends Viewable {
 	
 	
 	public void renderBackground(){
-//		window.setLayout(new BorderLayout());
-//	    window.setContentPane(new JLabel(new ImageIcon("imageBank/RecycleGame/recycleGameBackGround.png")));
-//	    window.setLayout(new FlowLayout());
-		//renderScreenItems();
-//		setLayout(new BorderLayout());
-//		setContentPane(new JLabel(new ImageIcon("imageBank/RecycleGame/recycleGameBackGround.png")));
-//		setLayout(new FlowLayout());
-//		System.out.println("recycle background printed blah blah blah");
+		window.setLayout(new BorderLayout());
+	    window.setContentPane(new JLabel(new ImageIcon("imageBank/RecycleGame/recycleGameBackGround.png")));
+	    window.setVisible(true);
 	}
 
-	@Override
 	public void renderDialogueBox() {
 		// TODO Auto-generated method stub
 		
 	}
+	public void paintComponent(Graphics g) {
+		//renderBackground();
+		super.paintComponent(g);
+        g.drawImage(arrowImage, 40, x, this);
+	};
 
 
 }

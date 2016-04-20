@@ -3,7 +3,9 @@ package stjonesestuary.controller;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
+import java.util.ArrayList;
 
+import stjonesestuary.model.screenitems.ScreenItem;
 import stjonesestuary.view.gameviews.AnimalGameView;
 import stjonesestuary.view.gameviews.MainGameView;
 import stjonesestuary.view.gameviews.SeedlingGameView;
@@ -19,8 +21,9 @@ public class AnimalGameController implements MouseListener, MouseMotionListener 
 		//new instance of timer
 		//user timer to call onTick()
 		//render
+		ArrayList<ScreenItem> screenitems = new ArrayList<ScreenItem>();
 		view = new AnimalGameView(window);
-		view.render();
+		view.render(screenitems);
 	}
 
 	@Override
