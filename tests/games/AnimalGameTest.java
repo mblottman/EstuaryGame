@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import junit.framework.TestCase;
 import stjonesestuary.model.games.AnimalGame;
 import stjonesestuary.model.screenitems.ScreenItem;
+import stjonesestuary.model.screenitems.animalgamescreenitems.*;
 
 
 public class AnimalGameTest extends TestCase {
@@ -21,25 +22,25 @@ public class AnimalGameTest extends TestCase {
 
 	public void testGetDucks() {
 		AnimalGame testgame = new AnimalGame();
-		ArrayList <ScreenItem> testducks = testgame.getDucks();
+		ArrayList <Animal> testducks = testgame.getDucks();
 		assertEquals(testducks,testgame.getDucks());
 	}
 
 	public void testGetWoodlandCreatures() {
 		AnimalGame testgame = new AnimalGame();
-		ArrayList <ScreenItem> testwood = testgame.getWoodlandCreatures();
+		ArrayList <Animal> testwood = testgame.getWoodlandCreatures();
 		assertEquals(testwood,testgame.getWoodlandCreatures());
 	}
 
 	public void testGetBirdsOfPrey() {
 		AnimalGame testgame = new AnimalGame();
-		ArrayList <ScreenItem> testbirds = testgame.getBirdsOfPrey();
+		ArrayList <Animal> testbirds = testgame.getBirdsOfPrey();
 		assertEquals(testbirds,testgame.getBirdsOfPrey());
 	}
 
 	public void testGetRiverCreatures() {
 		AnimalGame testgame = new AnimalGame();
-		ArrayList <ScreenItem> testrivercreatures = testgame.getRiverCreatures();
+		ArrayList <Animal> testrivercreatures = testgame.getRiverCreatures();
 		assertEquals(testrivercreatures,testgame.getRiverCreatures());
 	}
 

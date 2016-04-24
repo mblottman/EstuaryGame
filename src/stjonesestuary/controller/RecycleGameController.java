@@ -9,61 +9,6 @@ import stjonesestuary.view.gameviews.MainGameView;
 import stjonesestuary.view.gameviews.RecycleGameView;
 import stjonesestuary.view.gameviews.SeedlingGameView;
 
-public class RecycleGameController implements MouseListener, MouseMotionListener {
-	private RecycleGameView view;
-	private MainGameView window;
+public class RecycleGameController{
 	
-	public RecycleGameController(MainGameView window){
-		this.window = window;
-	}
-	public void run(){
-		//new instance of timer
-		//user timer to call onTick()
-		//render
-		view = new RecycleGameView(window);
-		view.render();
-	}
-
-	@Override
-	public void mouseDragged(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseMoved(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseClicked(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseEntered(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseExited(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mousePressed(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseReleased(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
 }

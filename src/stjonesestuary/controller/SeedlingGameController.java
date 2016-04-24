@@ -12,62 +12,7 @@ import stjonesestuary.view.gameviews.SeedlingGameView;
 import stjonesestuary.view.gameviews.Viewable;
 
 
-public class SeedlingGameController implements MouseListener, MouseMotionListener {
-	private SeedlingGameView view;
-	private MainGameView window;
+public class SeedlingGameController{
 	
-	public SeedlingGameController(MainGameView window){
-		this.window = window;
-	}
-	public void run(){
-		//new instance of timer
-		//user timer to call onTick()
-		//render
-		view = new SeedlingGameView(window);
-		view.render();
-	}
-	
-	
-	@Override
-	public void mouseDragged(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseMoved(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseClicked(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseEntered(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseExited(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mousePressed(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseReleased(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
 
 }
